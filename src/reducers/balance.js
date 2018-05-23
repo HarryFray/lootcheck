@@ -1,6 +1,6 @@
 import * as constants from '../actions/constants';
 
-export const balanceReducer = function (state, action) {
+const balanceReducer = function (state = 0, action) {
   switch (action.type) {
     case constants.SET_BALANCE: {
       return action.payload
@@ -8,3 +8,5 @@ export const balanceReducer = function (state, action) {
     default: return state;
   }
 }
+
+export default balanceReducer;
